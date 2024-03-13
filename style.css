@@ -1,0 +1,65 @@
+/* まず、style.cssにこのルールを書き入れてください。 */
+body {
+  font-size: 200%;
+}
+
+/* 【HTMS + CSS 基本演習】 */
+
+/* ここにルールを足していきましょう。*/
+h1 {color: blue;}
+
+
+/* 合計値を表示する箱のスタイル */
+#redBox {color: red;}
+
+#totalBox {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  background-color: green; /* 適切な色を指定してください */
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  line-height: 100px; /* 高さと同じにすることで、中央に数字を配置 */
+}
+
+
+/* 各値の四角のスタイル */
+#num1Box, #num2Box, #num3Box, #num4Box, #num5Box, #num6Box {
+  width: 400px;
+  height: 75px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 18px;
+}
+
+/* num1の四角 */
+#num1Box {
+  background-color: green;
+}
+
+/* num2の四角 */
+#num2Box {
+  background-color: red;
+}
+
+/* num3の四角 */
+#num3Box {
+  background-color: yellow;
+}
+
+/* num4の四角 */
+#num4Box {
+  background-color: blue;
+}
+
+/* num5の四角 */
+#num5Box {
+  background-color: orange;
+}
+
+/* num6の四角 */
+#num6Box {
+  background-color: purple;
+}
