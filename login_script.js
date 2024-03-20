@@ -5,7 +5,7 @@ document.querySelector('button[type="submit"]').addEventListener('click', functi
   // パスワードのチェック
   if (password === 'toyota') { 
       //alert('ログイン成功！');
-      window.location.href = 'index.html'; // index.htmlにリダイレクト
+      window.location.href = 'index_monitor.html'; // index.htmlにリダイレクト
   } else {
       alert('パスワードが間違っています。もう一度お試しください。');
       passwordInput.value = ''; // パスワードをクリア
