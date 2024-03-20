@@ -4,61 +4,50 @@
     <title>"Webあんどん"</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="script.js" defer></script>
-    <script src="make_linestop_rundom.js" defer></script> <!-- 追加 -->
+    <script src="make_linestop_random.js" defer></script> <!-- 追加 -->
   </head>
   <body>
-   
-    <h1>田原たけぽんライン </h1>
-    
-    <!-- 赤い四角を表示するdiv要素 -->
-    <div id="redBox">"ライン稼働モニタ"</div> <!-- ここに数字を表示 -->
-    
-    <!-- 合計値を表示する箱 -->
-    <div id="totalBox">ライン停止分: <span id="totalValue"></span></div>
-    
-    <div id="num1Box">生産数: <span id="num1Value"></span></div>
-    <div id="num2Box">ライン停止分: <span id="num2Value"></span></div>
-    <div id="num3Box">稼働率: <span id="num3Value"></span></div>
-    <div id="num4Box">呼出し回数: <span id="num4Value"></span></div>
-    <div id="num5Box">作業遅れ回数: <span id="num5Value"></span></div>
-    <div id="num6Box">設備異常件数: <span id="num6Value"></span></div>
+    <div class="black-square">
+      <div class="trapezoid"></div>
 
-    <h2>ライン停止時間</h2>
+      <h1>田原エンジン takedaライン</h1>
+      <h3>DIG基礎ﾌﾟﾛｸﾞﾗﾐﾝｸﾞ</h3>
+      
+      <!-- 赤いBOX -->
+      <div id="redBox">Webあんどんモニタ</div> <!-- ここに数字を表示 -->
+
+      <select id="period">
+        <option value="all">全期間</option>
+        <option value="today">本日</option>
+        <option value="thisWeek">今週</option>
+        <option value="thisMonth">今月</option>
+        <option value="thisYear">今年</option>
+      </select>
+      
+      <!-- 合計値の表示BOX -->
+      <div id="totalBox">生産数: <span id="totalValue"></span></div>
+      
+      <div id="num1Box">生産数: <span id="num1Value"></span></div>
+      <div id="num2Box">稼働率: <span id="num2Value"></span></div>
+      <div id="num3Box">ライン停止分: <span id="num3Value"></span></div>
+      <div id="num4Box">呼出し回数: <span id="num4Value"></span></div>
+      <div id="num5Box">作業遅れ回数: <span id="num5Value"></span></div>
+      <div id="num6Box">設備異常件数: <span id="num6Value"></span></div>
+
+      <div class="rabbit"></div>
+    </div>
+
+    <h2>はじめに[サンプル.CSV]をクリック
+      次に[ファイルを選択]をクリックします
+    </h2>
 
     <!-- ダウンロードボタン -->
-    <button id="downloadButton">Download CSV</button>
+    <button id="downloadButton">サンプル.CSV</button>
 
     <input type="file" id="fileInput">
     <div id="fileContent"></div>
     <div id="total"></div>
 
-    <script>
-      document.getElementById('fileInput').addEventListener('change', function(event) {
-          var file = event.target.files[0];
-          var reader = new FileReader();
-
-          reader.onload = function(event) {
-              var contents = event.target.result;
-              document.getElementById('fileContent').innerText = contents;
-
-              // 合計を計算
-              var lines = contents.split('\n');
-              var total = 0;
-              lines.forEach(function(line) {
-                  var parts = line.split(',');
-                  if (parts.length === 2) {
-                      var number = parseFloat(parts[1].trim()); // 数値の部分を取得し、数値に変換
-                      if (!isNaN(number)) {
-                          total += number;
-                      }
-                  }
-              });
-              document.getElementById('totalValue').innerText = total; // 合計値を表示する要素に値を設定
-          };
-
-          reader.readAsText(file);
-      });
-    </script>
     
   </body>
 </html>
