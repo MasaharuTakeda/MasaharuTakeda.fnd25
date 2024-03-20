@@ -1,0 +1,151 @@
+/* 黒色の四角形のスタイル */
+.black-square {
+  width: 500px; /* 幅を設定 */
+  height: 1050px; /* 高さを設定 */
+  background-color: black; /* 背景色を緑に設定 */
+  position: absolute; /* 絶対配置 */
+  top: 50%; /* 上端を画面の中央に配置します */
+  left: 50%; /* 左端を画面の中央に配置します */
+  transform: translate(-50%, -50%); /* 中心に配置します */
+  padding: 40px; /* 内側の余白を設定 */
+  box-sizing: border-box; /* paddingが幅や高さに含まれるようにします */
+  text-align: center; /* テキストを中央に配置 */
+  border-radius: 30px; /* 角を丸くする */
+}
+
+.black-square .trapezoid {
+  position: absolute; /* 絶対配置 */
+  top: 10px; /* 上端を設定 */
+  left: calc(50% - 85px); /* 左端を計算 */
+  width: 170px; /* 幅を設定 */
+  height: 30px; /* 高さを設定 */
+  background-color: rgba(255, 255, 255, 0.312); /* 背景色を白に設定 */
+  border-radius: 50px; /* 角を丸くする */
+}
+
+/* まず、style.cssにこのルールを書き入れてください。 */
+body {
+  font-size: 100%;
+}
+
+/* 【HTMS + CSS 基本演習】 */
+
+/* ここにルールを足していきましょう。*/
+h1 {color: white;}
+h2 {color: black;}
+h3 {color: white;}
+
+/* 追加：ドロップダウンのスタイル */
+#period {
+  font-size: 20px; /* フォントサイズを設定 */
+  padding: 5px; /* パディングを設定 */
+}
+
+
+/* 合計値を表示する箱のスタイル */
+#redBox {color: yellow;
+  font-size: 30px;
+}
+
+#totalBox {
+  position: relative;
+  width: 350px;
+  height: 100px;
+  margin: 35px;
+  background-color: white; /* 適切な色を指定してください */
+  color: black;
+  text-align: center;
+  font-size: 36px;
+  line-height: 100px; /* 高さと同じにすることで、中央に数字を配置 */
+}
+
+
+/* 各値の四角のスタイル */
+#num1Box, #num2Box, #num3Box, #num4Box, #num5Box, #num6Box {
+  width: 400px;
+  height: 75px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 25px;
+}
+
+/* num1の四角 */
+#num1Box {
+  background-color: rgb(205, 246, 145);
+}
+
+/* num2の四角 */
+#num2Box {
+  background-color: rgb(205, 246, 145);
+}
+
+/* num3の四角 */
+#num3Box {
+  background-color: rgb(239, 200, 200);
+}
+
+/* num4の四角 */
+#num4Box {
+  background-color: orange;
+}
+
+/* num5の四角 */
+#num5Box {
+  background-color: orange;
+}
+
+/* num6の四角 */
+#num6Box {
+  background-color: orange;
+}
+
+/* downButanのサイズを大きくする */
+#downloadButton {
+  font-size: 20px; /* ボタンのテキストのサイズを大きくします */
+  padding: 10px 20px; /* パディングを増やしてボタン全体のサイズを大きくします */
+}
+
+/* fileInputのサイズを大きくする */
+#fileInput {
+  font-size: 25px; /* テキストのサイズを大きくします */
+  padding: 5px; /* パディングを増やして入力フィールドのサイズを大きくします */
+  width: 600x; /* 入力フィールドの幅を指定します */
+}
+
+.container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px; /* ウサギの高さに合わせて調整 */
+}
+
+.black-box {
+  position: relative;
+  width: 80%; /* 黒い四角の幅を調整 */
+  height: 80px; /* 黒い四角の高さを調整 */
+  background-color: black; /* 黒い四角の背景色 */
+  margin: auto; /* 中央配置 */
+  overflow: hidden; /* 内部の要素がはみ出た場合は表示しない */
+}
+
+@keyframes run {
+  from {
+    right: -1500px; /* スタート位置 */
+  }
+  to {
+    right: calc(300% + 100px); /* 終了位置 */
+  }
+}
+
+.rabbit {
+  position: relative;
+  bottom: 0;
+  right: 0px; /* 画面の外側からスタート */
+  width: 100px; /* ウサギの幅に合わせて調整 */
+  height: 100px; /* ウサギの高さに合わせて調整 */
+  background-image: url("https://illustkun.com/wp-content/uploads/2018/12/illustkun-02392-small-car.png"); /* ウサギの画像を指定 */
+  background-size: cover;
+  animation: run 90s linear infinite; /* アニメーションを設定 */
+}
+
