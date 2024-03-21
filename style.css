@@ -5,7 +5,7 @@
   background-color: black; /* 背景色を緑に設定 */
   position: absolute; /* 絶対配置 */
   top: 50%; /* 上端を画面の中央に配置します */
-  left: 50%; /* 左端を画面の中央に配置します */
+  left: 30%; /* 左端を画面の中央に配置します */
   transform: translate(-50%, -50%); /* 中心に配置します */
   padding: 40px; /* 内側の余白を設定 */
   box-sizing: border-box; /* paddingが幅や高さに含まれるようにします */
@@ -32,8 +32,8 @@ body {
 
 /* ここにルールを足していきましょう。*/
 h1 {color: white;}
-h2 {color: black;}
-h3 {color: white;}
+h2 {color: white;}
+h3 {color: black;}
 
 /* 追加：ドロップダウンのスタイル */
 #period {
@@ -149,3 +149,45 @@ h3 {color: white;}
   animation: run 90s linear infinite; /* アニメーションを設定 */
 }
 
+
+/* 各ボックスのスタイル */
+.station-box {
+  width: 400px;
+  height: 120px;
+  background-color: #ccc;
+  margin: 30px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  position: absolute; /* 絶対位置指定 */
+}
+
+#station1-box {
+  top: 210px;
+  left: 1500px;
+}
+
+#station2-box {
+  top: 370px;
+  left: 1500px;
+}
+
+#station3-box {
+  top: 530px;
+  left: 1500px;
+}
+
+#station4-box {
+  top: 690px;
+  left: 1500px;
+}
+
+#station5-box {
+  top: 850px;
+  left: 1500px;
+}
+
+#station6-box {
+  top: 1010px;
+  left: 1500px;
+}
