@@ -146,7 +146,7 @@ h3 {color: black;}
   height: 100px; /* ウサギの高さに合わせて調整 */
   background-image: url("https://illustkun.com/wp-content/uploads/2018/12/illustkun-02392-small-car.png"); /* ウサギの画像を指定 */
   background-size: cover;
-  animation: run 180s linear infinite; /* アニメーションを設定 */
+  animation: run 190s linear infinite; /* アニメーションを設定 */
 }
 
 
